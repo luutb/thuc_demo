@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Them";
+}
+
+@model test2.Models.Employee
+
+<form action="", method="post">
+    <table>
+        <tr>
+            <td>Ho va Ten</td>
+            <td>@Html.TextBoxFor(m => m.hoten, new { @class = "form-control" })</td>
+        </tr>
+        <tr>
+            <td>ma Sv</td>
+            <td>@Html.TextBoxFor(m => m.ma_sv, new { @class = "form-control" })</td>
+        </tr>
+       
+        <tr>
+            <td>Nan Sinh</td>
+            <td>@Html.TextBoxFor(m => m.date, new { @class = "form-control" })</td>
+        </tr>
+        <tr>
+            <td>Que Quan</td>
+            <td>@Html.TextBoxFor(m => m.address, new { @class = "form-control" })</td>
+        </tr>
+        <tr>
+            <td>SDT</td>
+            <td>@Html.TextBoxFor(m => m.sdt, new { @class = "form-control" })</td>
+        </tr>
+        
+        <tr>
+            <td>@Html.TextBox("submit", "Submit", new { @type = "submit" })</td>
+        </tr>
+
+    </table>
+</form>

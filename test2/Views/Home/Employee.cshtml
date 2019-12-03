@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Employee";
+}
+@model IEnumerable<test2.Models.Employee>
+
+<div>Quan ly sinh vien</div>
+<div>@Html.ActionLink("Them", "Them", "Home")</div>
+<table>
+    <tr>
+        <th>STT</th>
+        <th>Ho va Ten</th>
+        <td>Ma Sv</td>
+        <th>Nam Sinh</th>
+        <th>Que Quan</th>
+        <th>So Dien Thoai</th>
+        <th>E-mail</th>
+        <th>Action</th>
+    </tr>
+    @{ 
+        var i = 0;
+        foreach(var item in Model)
+        {
+            <tr>
+                <td>@(i++)</td>
+                <td>@item.ma_sv</td>
+                <td>@item.hoten</td>
+                <td>@item.date</td>
+                <td>@item.address</td>
+                <td>@item.sdt</td>
+                <td>@item.email</td>
+                <td>@Html.ActionLink("Xoa","Delete","Home", new { @id= item.user_id},new { } )</td>
+            </tr>
+        }
+    }
+</table>
+

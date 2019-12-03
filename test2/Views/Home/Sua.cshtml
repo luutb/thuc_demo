@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Sua";
+}
+@model test2.Models.Employee
+    <form>
+        @Html.HiddenFor(m => m.user_id);
+    <table>
+
+        <tr>
+            <td>Ho va Ten</td>
+            <td>@Html.TextAreaFor(m => m.hoten, new { @class = "form-control" })</td>
+
+        </tr>
+        <tr>
+            <td>Ma Sinh vien</td>
+            <td>@Html.TextAreaFor(m => m.ma_sv, new { @class = "form-control" })</td>
+
+        </tr>
+        <tr>
+            <td>Ngay Sinh</td>
+            <td>@Html.TextAreaFor(m => m.date, new { @class = "form-control" })</td>
+
+        </tr>
+        <tr>
+            <td>Dia Chi</td>
+            <td>@Html.TextAreaFor(m => m.address, new { @class = "form-control" })</td>
+
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>@Html.TextAreaFor(m => m.email, new { @class = "form-control" })</td>
+
+        </tr>
+        <tr>
+            <td>So Dien Thoai</td>
+            <td>@Html.TextAreaFor(m => m.sdt, new { @class = "form-control" })</td>
+
+
+        </tr>
+    </table>
+</form>
